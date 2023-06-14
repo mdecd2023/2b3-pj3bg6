@@ -9,6 +9,10 @@
   \end{center}
   \caption{導入球員STL檔}
   \label{fig:photo}
+\end{figure}
+
+\begin{figure}[hbt!]
+  \begin{center}
     \includegraphics[width=0.5\textwidth]{球員組裝_2.png}
   \end{center}
   \caption{爆炸分解}
@@ -79,6 +83,8 @@
   \label{fig:photo}
 \end{figure}
 
+\newpage
+
 \section{背號}
 \begin{figure}[hbt!]
   \begin{center}
@@ -109,6 +115,8 @@
   \label{fig:photo}
 \end{figure}
 
+\newpage
+
 \section{程式碼}
 連線主機---使用遠端 API 來連接到位於本地主機 (localhost) 上執行，RemoteAPIClient 是用於建立與遠端應用程式之間的通訊連接。指定了要連接的主機名稱為 "localhost" ，連接埠為 23000。使用 client.getObject("sim") 來獲取遠端應用程式中的一個名為 "sim" 的物件。 "Program started" 表示程式開始執行，然後程式執行 client.getObject("sim") 這行程式碼後，輸出了 "Simulation started" ，表示模擬 (simulation) 開始執行。
 \begin{lstlisting}[language=Python, frame=single, numbers=left, captionpos=b, basicstyle=\ttfamily\small,showstringspaces=false, breaklines=true, tabsize=4, xleftmargin=15pt]
@@ -118,8 +126,6 @@ sim = client.getObject('sim')
 #sim.startSimulation()
 print('Simulation started')
 \end{lstlisting}
-
-\newpage
 
 輪子速度---定義一個 setBubbleRobVelocity 的函式，用於設定 BubbleRob 模型的輪子速度。首先使用 sim.getObject 函式獲取四個物件 leftMotor1、rightMotor1、leftMotor2、rightMotor2。用 sim.setJointTargetVelocity 函式 >>>設定輪子的目標速度，setJointTargetVelocity 函式 >>>設定 joint 的目標速度，因此可以用來控制輪子的運動。函式中的四個參數 leftWheelVelocity1、rightWheelVelocity1、leftWheelVelocity2、rightWheelVelocity2 分別代表四個輪子的速度。這些參數將會被傳遞給對應的 setJointTargetVelocity 函式來設定輪子的目標速度。
 \begin{lstlisting}[language=Python, frame=single, numbers=left, captionpos=b, basicstyle=\ttfamily\small,showstringspaces=false, breaklines=true, tabsize=4, xleftmargin=15pt]
