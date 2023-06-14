@@ -143,7 +143,7 @@ def setBubbleRobangel(a):
     #輸入一個變數改變前輪方向
 \end{lstlisting}
 
-\(\text{控制---這段程式碼是一個無窮迴圈，它會持續監聽鍵盤的按鍵輸入，並根據按下的按鍵來控制 BubbleRob 模型的運動。目的是根據鍵盤輸入來控制 BubbleRob 模型的運動，並提供了前進、後退、旋轉和停止等功能。程式碼中使用 keyboard.is_pressed 函式來判斷指定的按鍵是否被按下。若按下 'w' 鍵，則呼叫 'setBubbleRobVelocity(4, 4, 4, 4)' 來設定 BubbleRob 模型的速度為正向，並根據 'a' 和 'd' 鍵的狀態設定前輪的方向。若按下 's' 鍵，則呼叫 'setBubbleRobVelocity(-4, -4, -4, -4)' 來設定 BubbleRob 模型的速度為負向，並根據 'a' 和 'd' 鍵的狀態設定前輪的方向。若按下 'a' 鍵，則呼叫 'setBubbleRobVelocity(-4, 4, -4, 4)' 來設定 BubbleRob 模型的速度使其向左旋轉。若按下 'd' 鍵，則呼叫 'setBubbleRobVelocity(4, -4, 4, -4)' 來設定 BubbleRob 模型的速度使其向右旋轉。若按下 'q' 鍵，則停止模擬 (simulation)。若沒有按下任何按鍵，則呼叫 'setBubbleRobVelocity(0, 0, 0, 0)' 和 'setBubbleRobangel(0)'，將 BubbleRob 模型的速度和前輪方向設定為零，即停止移動。}\)
+\text{控制---這段程式碼是一個無窮迴圈，它會持續監聽鍵盤的按鍵輸入，並根據按下的按鍵來控制 BubbleRob 模型的運動。目的是根據鍵盤輸入來控制 BubbleRob 模型的運動，並提供了前進、後退、旋轉和停止等功能。程式碼中使用 \text{keyboard.is_pressed} 函式來判斷指定的按鍵是否被按下。若按下 'w' 鍵，則呼叫 \text{'setBubbleRobVelocity(4, 4, 4, 4)'} 來設定 BubbleRob 模型的速度為正向，並根據 'a' 和 'd' 鍵的狀態設定前輪的方向。若按下 's' 鍵，則呼叫 \text{'setBubbleRobVelocity(-4, -4, -4, -4)'} 來設定 BubbleRob 模型的速度為負向，並根據 'a' 和 'd' 鍵的狀態設定前輪的方向。若按下 'a' 鍵，則呼叫 \text{'setBubbleRobVelocity(-4, 4, -4, 4)'} 來設定 BubbleRob 模型的速度使其向左旋轉。若按下 'd' 鍵，則呼叫 \text{'setBubbleRobVelocity(4, -4, 4, -4)'} 來設定 BubbleRob 模型的速度使其向右旋轉。若按下 'q' 鍵，則停止模擬 \text{(simulation)}。若沒有按下任何按鍵，則呼叫 \text{'setBubbleRobVelocity(0, 0, 0, 0)'} 和 \text{'setBubbleRobangel(0)'}，將 BubbleRob 模型的速度和前輪方向設定為零，即停止移動。}
 \begin{lstlisting}[language=Python, frame=single, numbers=left, captionpos=b, basicstyle=\ttfamily\small,showstringspaces=false, breaklines=true, tabsize=4, xleftmargin=15pt]
 while True:
     if keyboard.is_pressed('w'):
